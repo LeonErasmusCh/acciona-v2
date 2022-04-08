@@ -14,3 +14,57 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Navbar */
+
+.navBar{
+  background-color: #30415f;
+}
+
+.navLogo{
+  color: #FFFF;
+}
+
+.loginBtn{
+  background-color: #30415f;
+  color: #FFFF;
+}
+
+.loginBtn:hover{
+  background-color: #4c6083;
+  color: #FFFF;
+}
+
+/* END Navbar */
+
+/* user-info */
+
+.user-info-container{
+  max-width: 600px;
+
+  /* center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.sociedad{
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+  height:200px;
+  margin:10px;
+  
+}
+
+.sociedadHeading{
+  margin-left: 37px;
+    /* center */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+/* END user-info */
+
