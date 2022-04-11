@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React, { useState, useContext } from 'react'; //React
+import Cookies from 'js-cookie'; // Cookies
+import Link from 'next/link'; //Next
+import { useRouter } from 'next/router'; //Next
 import { useForm } from 'react-hook-form'; //validation
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../utils/firebase-config';
+import { signInWithEmailAndPassword } from 'firebase/auth'; //Firebase
+import { auth } from '../utils/firebase-config'; //Firebase
+import { Store } from '../utils/Store'; //store
 
 export default function Login() {
+  const { state, dispatch } = useContext(Store);
+  const { userInfo } = state; // userInfo state
   const router = useRouter();
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
@@ -34,8 +38,14 @@ export default function Login() {
         loginEmail,
         loginPassword
       );
-      console.log('user', user);
-      router.push('/user-info');
+      dispatch({ type: 'USER_LOGIN', payload: user });
+      // Cookies.set('userInfo', JSON.stringify(user));
+      Cookies.set('userInfo', JSON.stringify(user));
+      //if firebase user exists - redict to /info-user
+      if (user) {
+        router.push('/user-info');
+      }
+      //console.log('userInfo in state', userInfo.user);
     } catch (error) {
       console.log(error.message);
     }
