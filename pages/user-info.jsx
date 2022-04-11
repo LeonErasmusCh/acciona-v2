@@ -11,19 +11,19 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="nombre"
+                aria-describedby="nombre"
                 placeholder="Nombre"
               />
             </div>
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="Apellido Paterno"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="apellidoPaterno"
                   placeholder="Apellido Paterno"
                 />
               </div>
@@ -33,10 +33,10 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="apellidoMaterno"
+                aria-describedby="apellidoMaterno"
                 placeholder="Apellido Materno"
               />
             </div>
@@ -44,9 +44,9 @@ export default function UserInfo() {
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="rut"
                   placeholder="RUT"
                 />
               </div>
@@ -56,19 +56,19 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="nacionalidad"
+                aria-describedby="nancionalidad"
                 placeholder="Nacionalidad"
               />
             </div>
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="estadoCivil"
                   placeholder="Estado Civil"
                 />
               </div>
@@ -78,19 +78,20 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="regimenDeBienes"
+                aria-describedby="regimenDeBienes"
                 placeholder="Regimen de bienes (solo casado)"
               />
             </div>
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="tipeDeTrabajador"
+                  aria-describedby="tipeDeTrabajador"
                   placeholder="Tipo de Trabajador"
                 />
               </div>
@@ -100,20 +101,20 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="carge"
+                aria-describedby="carge"
                 placeholder="Cargo"
               />
             </div>
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
-                  placeholder="Nombre empleador"
+                  id="nombreDeEmpleador"
+                  placeholder="Nombre del empleador"
                 />
               </div>
             </div>
@@ -122,19 +123,19 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="direccionParticular"
+                aria-describedby="direccionParticular"
                 placeholder="Dirección particular"
               />
             </div>
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="telefono"
                   placeholder="Teléfono / Celular"
                 />
               </div>
@@ -144,19 +145,20 @@ export default function UserInfo() {
           <div className="row">
             <div className="col-6">
               <input
-                type="email"
+                type="text"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
+                id="banco"
+                aria-describedby="banco"
                 placeholder="Banco"
               />
             </div>
+
             <div className="col-6">
               <div className="mb-3">
                 <input
-                  type="password"
+                  type="text"
                   className="form-control"
-                  id="exampleInputPassword1"
+                  id="numeroDeCuenta"
                   placeholder="Numero de cuenta"
                 />
               </div>
