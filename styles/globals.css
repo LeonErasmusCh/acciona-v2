@@ -68,3 +68,8 @@ a {
 
 /* END user-info */
 
+/* error messages - form validation */
+.error-message{
+  margin: 5px 0 10px 0;
+  color: rgb(230, 0, 0);
+}
