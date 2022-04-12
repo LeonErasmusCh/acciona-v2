@@ -2,19 +2,14 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
 const firebaseConfig = {
-  apiKey: 'AIzaSyBwAJYfJJn5m-x7fm568ZzjOCJFn47XpYo',
-  authDomain: 'acciona-staging.firebaseapp.com',
-  projectId: 'acciona-staging',
-  storageBucket: 'acciona-staging.appspot.com',
-  messagingSenderId: '771765205757',
-  appId: '1:771765205757:web:229ac2df2bf0accca55c94',
-  measurementId: 'G-99FMKBJN7G',
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
