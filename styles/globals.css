@@ -21,8 +21,9 @@ a {
   background-color: #30415f;
 }
 
-.navLogo{
-  color: #FFFF;
+.logo{
+  margin-left: 30px;
+  padding: 8px;
 }
 
 
@@ -33,7 +34,9 @@ a {
 .sidebar{
   height:100vh;
   border-right: 1px solid lightgrey;
-  font-weight: bold;
+  font-weight: bolder;
+  position: fixed;
+  cursor: pointer;
 }
 
 .menu{
@@ -41,7 +44,8 @@ a {
 }
 
 .active{
-  color:red
+  color: #FFFF;
+  background-color: #30415f;
 }
 
 .save-btn{
