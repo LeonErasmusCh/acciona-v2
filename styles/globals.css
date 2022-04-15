@@ -21,34 +21,53 @@ a {
   background-color: #30415f;
 }
 
-.navLogo{
-  color: #FFFF;
+.logo{
+  margin-left: 30px;
+  padding: 8px;
 }
 
-.loginBtn{
+
+/* end Navbar */
+
+
+/* Sidebar */
+.sidebar{
+  height:100vh;
+  border-right: 1px solid lightgrey;
+  font-weight: bolder;
+  position: fixed;
+  cursor: pointer;
+}
+
+.menu{
+  margin-top: 18vh;
+}
+
+.active{
+  color: #FFFF;
+  background-color: #30415f;
+}
+
+.save-btn{
   background-color: #30415f;
   color: #FFFF;
+  position: fixed;
+  bottom: 5%;
+  left: 4%;
 }
 
-.loginBtn:hover{
+.save-btn:hover{
   background-color: #4c6083;
   color: #FFFF;
 }
 
-/* END Navbar */
+
+/* end sidebar */
+
+
 
 /* user-info */
-
-.user-info-container{
-  max-width: 600px;
-
-  /* center */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-}
-
+ 
 .sociedad{
   border: 2px solid rgb(233, 233, 233);
   border-radius: 5px;

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'; //React
+import React, { useState, useContext, useEffect } from 'react'; //React
 import Cookies from 'js-cookie'; // Cookies
 import Link from 'next/link'; //Next
 import { useRouter } from 'next/router'; //Next
@@ -43,13 +43,18 @@ export default function Login() {
       Cookies.set('userInfo', JSON.stringify(user));
       //if firebase user exists - redict to /info-user
       if (user) {
-        router.push('/user-info');
+        router.push('/profile');
       }
       //console.log('userInfo in state', userInfo.user);
     } catch (error) {
       console.log(error.message);
     }
   };
+
+  useEffect(() => {
+    console.log(process.env.NEXT_PUBLIC_API_KEY);
+    console.log('.env test', process.env.NEXT_PUBLIC_BASE_URL);
+  }, []);
 
   return (
     <>
