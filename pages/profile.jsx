@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Link from 'next/link';
 import { Store } from '../utils/Store'; //store
+import Modal from '../components/modal';
 
 export default function UserInfo() {
   //Datos personales
@@ -37,7 +38,7 @@ export default function UserInfo() {
 
   return (
     <>
-      <div className="container-fluid mt-5">
+      <div className="container-fluid mainsection">
         <div className="row">
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
@@ -55,7 +56,18 @@ export default function UserInfo() {
           </div>
           {/* sidebar end */}
 
-          <div className="col-10 d-flex justify-content-end">
+          {/* navbar2 */}
+          <nav className="navbar navbar-expand-lg fixed-top navbar2">
+            <div className="container-fluid">
+              <div
+                className="collapse navbar-collapse d-flex justify-content-center"
+                id="navbarNav"
+              ></div>
+            </div>
+          </nav>
+          {/* navbar2 end */}
+
+          <div className="col-10 d-flex justify-content-end ">
             <form className="col-8 mb-5">
               <h3 className="my-5">Datos personales</h3>
 
@@ -848,9 +860,10 @@ export default function UserInfo() {
               {/* <div className="d-grid gap-2 col-6 mx-auto my-4"> */}
               <div className="">
                 <Link href="/sociedades" passHref>
-                  <button className="btn save-btn" type="submit">
+                  <Modal />
+                  {/* <button className="btn save-btn" type="submit">
                     Guardar
-                  </button>
+                  </button> */}
                 </Link>
               </div>
             </form>
