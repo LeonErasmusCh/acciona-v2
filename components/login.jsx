@@ -28,7 +28,7 @@ export default function Login() {
 
   const onSubmit = (data) => {
     //console.log(data);
-    handleLogin();
+    // handleLogin();
   };
 
   const handleLogin = async () => {
@@ -39,7 +39,6 @@ export default function Login() {
         loginPassword
       );
       dispatch({ type: 'USER_LOGIN', payload: user });
-      // Cookies.set('userInfo', JSON.stringify(user));
       Cookies.set('userInfo', JSON.stringify(user));
       //if firebase user exists - redict to /info-user
       if (user) {

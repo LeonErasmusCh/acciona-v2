@@ -19,15 +19,38 @@ a {
 
 .navBar{
   background-color: #30415f;
+  height: 80px;
 }
+
+.navbar2 {
+  background-color: #FFFF;
+  border-bottom: 1px solid lightgray;
+  margin-top: 80px;
+  height:80px;
+}
+
+.navbar2 p {
+  margin: 20px 40px;
+  color: black;
+  font-weight: bold;
+}
+
+p.active{
+  color: #b6b6b6;
+}
+
 
 .logo{
   margin-left: 30px;
   padding: 8px;
 }
-
-
 /* end Navbar */
+
+/* Main section - page body */
+.mainsection{
+  margin-top: 160px;
+}
+/* Main section - page body END */
 
 
 /* Sidebar */
@@ -43,10 +66,7 @@ a {
   margin-top: 18vh;
 }
 
-.active{
-  color: #FFFF;
-  background-color: #30415f;
-}
+
 
 .save-btn{
   background-color: #30415f;
@@ -67,6 +87,10 @@ a {
 
 
 /* user-info */
+
+.user-info-container{
+  margin: 100px;
+}
  
 .sociedad{
   border: 2px solid rgb(233, 233, 233);

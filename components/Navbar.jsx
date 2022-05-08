@@ -11,7 +11,6 @@ export default function Navbar() {
       <div className="container-fluid">
         <div className="logo">
           <Link href={'/'} passHref>
-            {/* <p className=" navbar-brand navLogo mb-1">Acciona | Capital</p> */}
             <Image
               alt="Acciona Capital"
               src="/../public/logo.png"

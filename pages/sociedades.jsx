@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import Navbar2 from '../components/navbar2';
 
 export default function Sociedades() {
   return (
     <>
-      <div className="container-fluid user-info-container">
+      <Navbar2 />
+      <div className="container-fluid mainsection">
         <div className="row">
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
@@ -23,6 +25,7 @@ export default function Sociedades() {
           {/* sidebar end */}
           <div className="col-10 d-flex justify-content-end">
             <div className="col-8 mb-5">
+              <h3 className="my-5">Elige tu sociedad de inversión</h3>
               <div className="row my-3">
                 <Link href={'/sociedad1'} passHref>
                   <div className="col-5 mx-auto sociedad">
