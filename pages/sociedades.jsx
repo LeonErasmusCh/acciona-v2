@@ -55,5 +55,5 @@ export default function Sociedades() {
         </div>
       </div>
     </>
-  );
+  )
 }

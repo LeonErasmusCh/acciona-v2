@@ -871,5 +871,5 @@ export default function UserInfo() {
         </div>
       </div>
     </>
-  );
+  )
 }

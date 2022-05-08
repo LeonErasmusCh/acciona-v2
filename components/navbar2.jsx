@@ -26,5 +26,5 @@ export default function Navbar2() {
         </div>
       </nav>
     </div>
-  );
+  )
 }

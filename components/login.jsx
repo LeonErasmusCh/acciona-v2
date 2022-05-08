@@ -121,5 +121,5 @@ export default function Login() {
         <p className="my-4 text-center">Olvidé mi contraseña</p>
       </form>
     </>
-  );
+  )
 }
