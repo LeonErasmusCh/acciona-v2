@@ -1,6 +1,8 @@
 import React from 'react';
+import { useRouter } from 'next/router'
 
 export default function Modal() {
+  const router = useRouter()
   return (
     <div>
       <button
@@ -56,6 +58,8 @@ export default function Modal() {
             <button
               type="button"
               className="btn btn-primary w-25 m-auto mt-3 mb-5"
+              data-bs-dismiss="modal"
+              onClick={() => router.push('sociedades')}
             >
               Acepto
             </button>

@@ -43,7 +43,7 @@ export default function UserInfo() {
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
-              <Link href={'/'} passHref>
+            <Link href={'sociedades'} passHref>
                 <p>Home</p>
               </Link>
               <Link href={'/profile'} passHref>

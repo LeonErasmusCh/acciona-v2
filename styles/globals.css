@@ -15,6 +15,12 @@ a {
   box-sizing: border-box;
 }
 
+.data-display{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 20px;
+}
+
 /* Navbar */
 
 .navBar{
@@ -80,8 +86,6 @@ p.active{
   background-color: #4c6083;
   color: #FFFF;
 }
-
-
 /* end sidebar */
 
 
@@ -111,8 +115,26 @@ p.active{
 
 /* END user-info */
 
+
+/* contract */
+
+.firmar-btn{
+  background-color: #30415f;
+  color: #FFFF;
+  position: fixed;
+  top: 290px;
+  right: 3%;
+  width: 150px;
+}
+
+/* contract end */
+
+
+
 /* error messages - form validation */
 .error-message{
   margin: 5px 0 10px 0;
   color: rgb(230, 0, 0);
 }
+
+
