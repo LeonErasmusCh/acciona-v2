@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StoreProvider>
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
     </StoreProvider>
   );

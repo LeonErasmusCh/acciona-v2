@@ -10,10 +10,10 @@ export default function Navbar() {
     <nav className="navbar fixed-top navBar">
       <div className="container-fluid">
         <div className="logo">
-          <Link href={'/'} passHref>
+          <Link href={'sociedades'} passHref>
             <Image
               alt="Acciona Capital"
-              src="/../public/logo.png"
+              src="/public/logo.png"
               width={200}
               height={30}
             />
@@ -29,5 +29,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  )
 }

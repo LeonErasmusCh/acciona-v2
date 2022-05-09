@@ -1,25 +1,34 @@
 import React from 'react';
 import Link from 'next/link';
-import Navbar2 from '../components/navbar2';
 
 export default function Sociedades() {
   return (
     <>
-      <Navbar2 />
+      {/* Navbar2  */}
+      <div>
+      <nav className="navbar navbar-expand-lg fixed-top navbar2">
+        <div className="container-fluid">
+          <div
+            className="collapse navbar-collapse d-flex justify-content-center"
+            id="navbarNav"
+          >
+          </div>
+        </div>
+      </nav>
+    </div>
+      {/* Navbar2 End */}
       <div className="container-fluid mainsection">
         <div className="row">
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
-              <Link href={'/'} passHref>
-                <p>Home</p>
+              <Link href={'sociedades'} passHref>
+                <p className='active'>Home</p>
               </Link>
               <Link href={'/profile'} passHref>
                 <p>Mi prefil</p>
               </Link>
-              <Link href={'/sociedades'} passHref>
-                <p className="active">Sociedades</p>
-              </Link>
+              
             </div>
           </div>
           {/* sidebar end */}
@@ -27,24 +36,24 @@ export default function Sociedades() {
             <div className="col-8 mb-5">
               <h3 className="my-5">Elige tu sociedad de inversión</h3>
               <div className="row my-3">
-                <Link href={'/sociedad1'} passHref>
+                <Link href={'documents'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 1</h5>
                   </div>
                 </Link>
-                <Link href={'/sociedad2'} passHref>
+                <Link href={'documents'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 2</h5>
                   </div>
                 </Link>
               </div>
               <div className="row my-3">
-                <Link href={'/sociedad3'} passHref>
+                <Link href={'documents'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 3</h5>
                   </div>
                 </Link>
-                <Link href={'/sociedad4'} passHref>
+                <Link href={'documents'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 4</h5>
                   </div>
@@ -55,5 +64,5 @@ export default function Sociedades() {
         </div>
       </div>
     </>
-  );
+  )
 }
