@@ -17,8 +17,14 @@ a {
 
 .data-display{
   border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.data-display-totals{
+  border: 2px solid grey;
+  border-radius: 6px;
+  padding: 15px;
 }
 
 /* Navbar */
@@ -126,9 +132,15 @@ p.active{
   right: 3%;
   width: 150px;
 }
-
 /* contract end */
 
+
+/* Cartola */
+.cartola{
+  margin-top: 120px !important;
+  margin-bottom: 160px !important;
+}
+/* Cartola end */
 
 
 /* error messages - form validation */

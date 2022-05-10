@@ -13,7 +13,7 @@ export default function Navbar() {
           <Link href={'sociedades'} passHref>
             <Image
               alt="Acciona Capital"
-              src="/public/logo.png"
+              src="/../public/logo.png"
               width={200}
               height={30}
             />
