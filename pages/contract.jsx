@@ -120,7 +120,7 @@ export default function Documents() {
               </div>
             </div>
           </div>
-          <button className="btn firmar-btn" type="submit" onClick={() => router.push('resumen')}>
+          <button className="btn firmar-btn" type="submit" onClick={() => router.push('documents')}>
             firmar
           </button>
         </div>

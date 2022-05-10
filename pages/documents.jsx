@@ -84,7 +84,9 @@ useEffect(() => {
               <Link href={'contract'} passHref>
                   <p className=' text-center m-3 data-display'>Contrato</p>
               </Link>
+              <Link href={'cartola'} passHref>
                   <p className=' text-center m-3 data-display'>Cartola {date}</p>
+                </Link>
               </div>
             </div>
           </div>

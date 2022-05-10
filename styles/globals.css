@@ -17,8 +17,14 @@ a {
 
 .data-display{
   border: 1px solid lightgray;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.data-display-totals{
+  border: 2px solid grey;
+  border-radius: 6px;
+  padding: 15px;
 }
 
 /* Navbar */
@@ -72,8 +78,6 @@ p.active{
   margin-top: 18vh;
 }
 
-
-
 .save-btn{
   background-color: #30415f;
   color: #FFFF;
@@ -126,9 +130,30 @@ p.active{
   right: 3%;
   width: 150px;
 }
-
 /* contract end */
 
+
+/* Cartola */
+.cartola{
+  margin-top: 120px !important;
+  margin-bottom: 160px !important;
+}
+
+.btn-back{
+  background-color: #30415f;
+  color: #FFFF;
+}
+
+.btn-back:hover{
+  background-color: #30415f;
+  color: rgb(212, 212, 212);
+}
+
+.close{
+  color: grey;
+}
+
+/* Cartola end */
 
 
 /* error messages - form validation */

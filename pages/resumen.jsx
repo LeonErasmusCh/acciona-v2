@@ -48,10 +48,10 @@ useEffect(() => {
               <Link href={'sociedades'} passHref>
                 <p className='mb-5'>Home</p>
               </Link>
-                <Link href={'/sociedades'} passHref>
+                <Link href={''} passHref>
                 <p className="active">Fondo Frigorificos Unidos II</p>
               </Link>
-              <Link href={'/sociedades'} passHref>
+              <Link href={''} passHref>
                 <p className="">Fondo Parcelas de TaguaTagua</p>
               </Link>
               <Link href={'/profile'} passHref>
