@@ -78,8 +78,6 @@ p.active{
   margin-top: 18vh;
 }
 
-
-
 .save-btn{
   background-color: #30415f;
   color: #FFFF;
@@ -140,6 +138,21 @@ p.active{
   margin-top: 120px !important;
   margin-bottom: 160px !important;
 }
+
+.btn-back{
+  background-color: #30415f;
+  color: #FFFF;
+}
+
+.btn-back:hover{
+  background-color: #30415f;
+  color: rgb(212, 212, 212);
+}
+
+.close{
+  color: grey;
+}
+
 /* Cartola end */
 
 
