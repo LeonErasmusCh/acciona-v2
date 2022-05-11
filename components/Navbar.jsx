@@ -22,7 +22,9 @@ export default function Navbar() {
         <div className="text-white">
           {userInfo && (
             <p>
-              <span>{userInfo.user.email}</span>
+             {/*  <span>{userInfo.user.email}</span> */}
+               <span className="mx-3">Cristobal</span> 
+              <span >|</span>
               <span className="mx-3">cerrar session</span>
             </p>
           )}

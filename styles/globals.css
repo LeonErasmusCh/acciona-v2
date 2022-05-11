@@ -28,7 +28,6 @@ a {
 }
 
 /* Navbar */
-
 .navBar{
   background-color: #30415f;
   height: 80px;
@@ -44,7 +43,7 @@ a {
 .navbar2 p {
   margin: 20px 40px;
   color: black;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 p.active{
@@ -69,7 +68,7 @@ p.active{
 .sidebar{
   height:100vh;
   border-right: 1px solid lightgrey;
-  font-weight: bolder;
+  font-weight: 500;
   position: fixed;
   cursor: pointer;
 }
@@ -95,7 +94,6 @@ p.active{
 
 
 /* user-info */
-
 .user-info-container{
   margin: 100px;
 }
@@ -116,12 +114,10 @@ p.active{
     left: 50%;
     transform: translate(-50%, -50%); 
 }
-
 /* END user-info */
 
 
 /* contract */
-
 .firmar-btn{
   background-color: #30415f;
   color: #FFFF;
