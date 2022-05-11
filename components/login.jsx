@@ -28,7 +28,7 @@ export default function Login() {
 
   const onSubmit = (data) => {
     //console.log(data);
-    // handleLogin();
+    handleLogin();
   };
 
   const handleLogin = async () => {
@@ -50,10 +50,10 @@ export default function Login() {
     }
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     console.log(process.env.NEXT_PUBLIC_API_KEY);
     console.log('.env test', process.env.NEXT_PUBLIC_BASE_URL);
-  }, []);
+  }, []); */
 
   return (
     <>
