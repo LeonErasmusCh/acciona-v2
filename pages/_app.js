@@ -6,7 +6,7 @@ import '../styles/globals.css';
 import Layout from '../components/layout';
 
 //store - context
-import { StoreProvider } from '../utils/Store';
+import { StoreProvider } from '../utils/store';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

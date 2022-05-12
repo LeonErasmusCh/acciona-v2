@@ -1,7 +1,7 @@
 import React , { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-export default function Resumen() {
+export default function ResumenFrigo() {
 
 
 useEffect(() => {
@@ -13,6 +13,7 @@ useEffect(() => {
   return (
     <>
       {/* Navbar2  */}
+
       <div>
       <nav className="navbar navbar-expand-lg fixed-top navbar2">
         <div className="container-fluid">
@@ -20,17 +21,17 @@ useEffect(() => {
             className="collapse navbar-collapse d-flex justify-content-center"
             id="navbarNav"
           >
-            <Link href={'resumen'} passHref>
+            <Link href={'resumen-frigo'} passHref>
             <p className="active" aria-current="page" href="#"> 
                 Resumen
               </p>
             </Link>
-            <Link href={'datos-fondo'} passHref>
+            <Link href={'datos-fondo-frigo'} passHref>
             <p className="" href="#">
               Datos Fondo
             </p>
             </Link>
-            <Link href={'documents'} passHref>
+            <Link href={'documents-frigo'} passHref>
             <p className="" href="#">
               Documentos
             </p>
@@ -48,10 +49,10 @@ useEffect(() => {
               <Link href={'sociedades'} passHref>
                 <p className='mb-5'>Home</p>
               </Link>
-                <Link href={''} passHref>
+                <Link href={'resumen-frigo'} passHref>
                 <p className="active">Fondo Frigorificos Unidos II</p>
               </Link>
-              <Link href={''} passHref>
+              <Link href={'resumen-parcelas'} passHref>
                 <p className="">Fondo Parcelas de TaguaTagua</p>
               </Link>
               <Link href={'/profile'} passHref>

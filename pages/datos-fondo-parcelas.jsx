@@ -1,7 +1,7 @@
 import React , { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-export default function DatosFondo() {
+export default function DatosFondoParcelas() {
 
 
 useEffect(() => {
@@ -20,17 +20,18 @@ useEffect(() => {
             className="collapse navbar-collapse d-flex justify-content-center"
             id="navbarNav"
           >
-            <Link href={'resumen'} passHref>
+            
+            <Link href={'resumen-parcelas'} passHref>
             <p className="" aria-current="page" href="#"> 
                 Resumen
               </p>
             </Link>
-            <Link href={'datos-fondo'} passHref>
+            <Link href={'datos-fondo-parcelas'} passHref>
             <p className="active" href="#">
               Datos Fondo
             </p>
             </Link>
-            <Link href={'documents'} passHref>
+            <Link href={'documents-parcelas'} passHref>
             <p className="" href="#">
               Documentos
             </p>
@@ -48,11 +49,11 @@ useEffect(() => {
               <Link href={'sociedades'} passHref>
                 <p className='mb-5'>Home</p>
               </Link>
-                <Link href={''} passHref>
-                <p className="active">Fondo Frigorificos Unidos II</p>
+                <Link href={'datos-fondo-frigo'} passHref>
+                <p className="">Fondo Frigorificos Unidos II</p>
               </Link>
-              <Link href={''} passHref>
-                <p className="">Fondo Parcelas de TaguaTagua</p>
+              <Link href={'datos-fondo-parcelas'} passHref>
+                <p className="active">Fondo Parcelas de TaguaTagua</p>
               </Link>
               <Link href={'/profile'} passHref>
                 <p className='mt-5'>Mi prefil</p>

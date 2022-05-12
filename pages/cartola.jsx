@@ -23,7 +23,7 @@ export default function Cartola() {
       <div className="container mt-5 mb-5 col-10 cartola">
         <div className="row mt-5 border-bottom">
           <div className="row">
-          <Link href={"documents"} passHref>
+          <Link href={""} passHref>
             <p className="close text-end">cerrar</p>
             </Link>
           </div>
@@ -237,7 +237,7 @@ export default function Cartola() {
         </div>
         <div className="container mt-5">
           <div className="row w-25 mx-auto">
-            <Link href={"documents"} passHref>
+            <Link href={""} passHref>
               <button type="button" className="btn btn-back btn-sm">
                 Volver
               </button>

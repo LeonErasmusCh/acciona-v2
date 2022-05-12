@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Store } from '../utils/Store'; //store
+import { Store } from '../utils/store'; //store
 
 export default function Navbar() {
   const { state, dispatch } = useContext(Store);

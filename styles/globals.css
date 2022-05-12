@@ -15,29 +15,29 @@ a {
   box-sizing: border-box;
 }
 
-.data-display{
+.data-display {
   border: 1px solid lightgray;
   border-radius: 6px;
   padding: 15px;
 }
 
-.data-display-totals{
+.data-display-totals {
   border: 2px solid grey;
   border-radius: 6px;
   padding: 15px;
 }
 
 /* Navbar */
-.navBar{
+.navBar {
   background-color: #30415f;
   height: 80px;
 }
 
 .navbar2 {
-  background-color: #FFFF;
+  background-color: #ffff;
   border-bottom: 1px solid lightgray;
   margin-top: 80px;
-  height:80px;
+  height: 80px;
 }
 
 .navbar2 p {
@@ -46,116 +46,110 @@ a {
   font-weight: 500;
 }
 
-p.active{
+p.active {
   color: #b6b6b6;
 }
 
-
-.logo{
+.logo {
   margin-left: 30px;
   padding: 8px;
 }
 /* end Navbar */
 
 /* Main section - page body */
-.mainsection{
+.mainsection {
   margin-top: 160px;
 }
 /* Main section - page body END */
 
-
 /* Sidebar */
-.sidebar{
-  height:100vh;
+.sidebar {
+  height: 100vh;
   border-right: 1px solid lightgrey;
   font-weight: 500;
   position: fixed;
   cursor: pointer;
 }
 
-.menu{
+.menu {
   margin-top: 18vh;
 }
 
-.save-btn{
+.save-btn {
   background-color: #30415f;
-  color: #FFFF;
+  color: #ffff;
   position: fixed;
   bottom: 5%;
   left: 4%;
 }
 
-.save-btn:hover{
+.save-btn:hover {
   background-color: #4c6083;
-  color: #FFFF;
+  color: #ffff;
 }
 /* end sidebar */
 
-
-
 /* user-info */
-.user-info-container{
+.user-info-container {
   margin: 100px;
 }
- 
-.sociedad{
+
+.sociedad {
   border: 2px solid rgb(233, 233, 233);
   border-radius: 5px;
-  height:200px;
-  margin:10px;
-  
+  height: 200px;
+  margin: 10px;
 }
 
-.sociedadHeading{
+.sociedadHeading {
   margin-left: 37px;
-    /* center */
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
+  /* center */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 /* END user-info */
 
-
 /* contract */
-.firmar-btn{
+.firmar-btn {
   background-color: #30415f;
-  color: #FFFF;
+  color: #ffff;
   position: fixed;
   top: 290px;
   right: 3%;
   width: 150px;
 }
+
+.firmar-btn:hover {
+  color: lightgray;
+}
 /* contract end */
 
-
 /* Cartola */
-.cartola{
+.cartola {
   margin-top: 120px !important;
   margin-bottom: 160px !important;
 }
 
-.btn-back{
+.btn-back {
   background-color: #30415f;
-  color: #FFFF;
+  color: #ffff;
 }
 
-.btn-back:hover{
+.btn-back:hover {
   background-color: #30415f;
   color: rgb(212, 212, 212);
 }
 
-.close{
+.close {
   color: grey;
 }
 
 /* Cartola end */
 
-
 /* error messages - form validation */
-.error-message{
+.error-message {
   margin: 5px 0 10px 0;
   color: rgb(230, 0, 0);
 }
-
-
