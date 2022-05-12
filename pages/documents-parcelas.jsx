@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-export default function Documents() {
+export default function DocumentParcelas() {
   const [date, setDate] = useState("");
 
   useEffect(() => {
@@ -53,22 +53,22 @@ export default function Documents() {
               <Link href={'sociedades'} passHref>
                 <p className='mb-5'>Home</p>
               </Link>
-                <Link href={'datos-fondo-frigo'} passHref>
+                <Link href={'documents-frigo'} passHref>
                 <p className="">Fondo Frigorificos Unidos II</p>
               </Link>
-              <Link href={'datos-fondo-parcelas'} passHref>
+              <Link href={'documents-parcelas'} passHref>
                 <p className="active">Fondo Parcelas de TaguaTagua</p>
               </Link>
               <Link href={'/profile'} passHref>
-                <p className='mt-5'>Mi prefil</p>
+                <p className='mt-5'>Mi perfil</p>
               </Link>
             </div>
           </div>
           {/* sidebar end */}
-          <div className="col-10 d-flex justify-content-end">
+          <div className="col-10 d-flex justify-content-end mt-5">
             <div className="col-8 mb-5">
               <div className="row my-3">
-                <Link href={"contract"} passHref>
+                <Link href={"contract-parcelas"} passHref>
                   <p className=" text-center m-3 data-display">Contrato</p>
                 </Link>
                 <Link href={"cartola"} passHref>

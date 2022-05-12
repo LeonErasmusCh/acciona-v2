@@ -92,14 +92,13 @@ export default function UserInfo() {
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
-            <Link href={'sociedades'} passHref>
-                <p>Home</p>
+              <Link href={'sociedades'} passHref>
+                <p className='mb-5'>Home</p>
               </Link>
+                <p className=""></p>
+                <p className=""></p>
               <Link href={'/profile'} passHref>
-                <p className="active">Mi prefil</p>
-              </Link>
-              <Link href={'/sociedades'} passHref>
-                <p>Sociedades</p>
+                <p className='mt-5 active'>Mi perfil</p>
               </Link>
             </div>
           </div>
@@ -419,6 +418,7 @@ export default function UserInfo() {
                       className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="1"
+                      autoFocus
                     ></textarea>
                   </div>
                 )}
@@ -475,6 +475,7 @@ export default function UserInfo() {
                       className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="1"
+                      autoFocus
                     ></textarea>
                   </div>
                 )}
@@ -531,6 +532,7 @@ export default function UserInfo() {
                       className="form-control"
                       id="exampleFormControlTextarea1"
                       rows="1"
+                      autoFocus
                     ></textarea>
                   </div>
                 )}
@@ -640,6 +642,7 @@ export default function UserInfo() {
                             id="lugarDeEmpleo"
                             aria-describedby="lugarDeEmpleo"
                             placeholder="Lugar de Empleo"
+                            autoFocus
                           />
                         </div>
 
@@ -697,6 +700,7 @@ export default function UserInfo() {
                           className="form-control"
                           id="propertySales"
                           rows="3"
+                          autoFocus
                         ></textarea>
                       </div>
                     </div>
@@ -717,6 +721,7 @@ export default function UserInfo() {
                           id="legalAddress"
                           aria-describedby="legalAddress"
                           placeholder="Dirección Legal"
+                          autoFocus
                         />
                       </div>
 
@@ -793,6 +798,7 @@ export default function UserInfo() {
                           className="form-control"
                           id="donorName"
                           rows="3"
+                          autoFocus
                         ></textarea>
                       </div>
                     </div>
@@ -877,6 +883,7 @@ export default function UserInfo() {
                           className="form-control"
                           id="others"
                           rows="3"
+                          autoFocus
                         ></textarea>
                       </div>
                     </div>

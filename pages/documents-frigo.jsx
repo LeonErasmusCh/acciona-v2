@@ -47,29 +47,30 @@ export default function Documents() {
       {/* Navbar2 End */}
       <div className="container-fluid mainsection">
         <div className="row">
+          
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
               <Link href={'sociedades'} passHref>
                 <p className='mb-5'>Home</p>
               </Link>
-                <Link href={'resumen-frigo'} passHref>
+                <Link href={'documents-frigo'} passHref>
                 <p className="active">Fondo Frigorificos Unidos II</p>
               </Link>
-              <Link href={'resumen-parcelas'} passHref>
+              <Link href={'documents-parcelas'} passHref>
                 <p className="">Fondo Parcelas de TaguaTagua</p>
               </Link>
               <Link href={'/profile'} passHref>
-                <p className='mt-5'>Mi prefil</p>
+                <p className='mt-5'>Mi perfil</p>
               </Link>
             </div>
           </div>
-
           {/* sidebar end */}
-          <div className="col-10 d-flex justify-content-end">
+
+          <div className="col-10 d-flex justify-content-end mt-5">
             <div className="col-8 mb-5">
               <div className="row my-3">
-                <Link href={"contract"} passHref>
+                <Link href={"contract-frigo"} passHref>
                   <p className=" text-center m-3 data-display">Contrato</p>
                 </Link>
                 <Link href={"cartola"} passHref>

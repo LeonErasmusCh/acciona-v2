@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 
-export default function Documents() {
+export default function ContractParcelas() {
 
     const router = useRouter()
 
@@ -29,17 +29,17 @@ export default function Documents() {
               className="collapse navbar-collapse d-flex justify-content-center"
               id="navbarNav"
             >
-              <Link href={"resumen"} passHref>
+              <Link href={"resumen-parcelas"} passHref>
                 <p className="" aria-current="page" href="#">
                   Resumen
                 </p>
               </Link>
-              <Link href={"datos-fondo"} passHref>
+              <Link href={"datos-fondo-parcelas"} passHref>
                 <p className="" href="#">
                   Datos Fondo
                 </p>
               </Link>
-              <Link href={"documents"} passHref>
+              <Link href={"documents-parcelas"} passHref>
                 <p className="active" href="#">
                   Documentos
                 </p>
@@ -51,32 +51,26 @@ export default function Documents() {
       {/* Navbar2 End */}
       <div className="container-fluid mainsection">
         <div className="row">
+
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
-              <Link href={"sociedades"} passHref>
-                <p className="" aria-current="page" href="#">
-                  Home
-                </p>
+              <Link href={'sociedades'} passHref>
+                <p className='mb-5'>Home</p>
               </Link>
-              <Link href={"resumen"} passHref>
-                <p className="" aria-current="page" href="#">
-                  Resumen
-                </p>
+                <Link href={'datos-fondo-frigo'} passHref>
+                <p className="">Fondo Frigorificos Unidos II</p>
               </Link>
-              <Link href={"datos-fondo"} passHref>
-                <p className="" href="#">
-                  Datos Fondo
-                </p>
+              <Link href={'datos-fondo-parcelas'} passHref>
+                <p className="active">Fondo Parcelas de TaguaTagua</p>
               </Link>
-              <Link href={"documents"} passHref>
-                <p className="active" href="#">
-                  Documentos
-                </p>
+              <Link href={'/profile'} passHref>
+                <p className='mt-5'>Mi prefil</p>
               </Link>
             </div>
           </div>
           {/* sidebar end */}
+
           <div className="col-10 d-flex justify-content-end">
             <div className="col-8 mb-5">
               <h3 className="mt-5 mb-0">Contrato</h3>
@@ -120,7 +114,7 @@ export default function Documents() {
               </div>
             </div>
           </div>
-          <button className="btn firmar-btn" type="submit" onClick={() => router.push('documents')}>
+          <button className="btn firmar-btn" type="submit" onClick={() => router.push('documents-parcelas')}>
             firmar
           </button>
         </div>

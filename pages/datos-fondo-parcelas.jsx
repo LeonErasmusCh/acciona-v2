@@ -20,6 +20,7 @@ useEffect(() => {
             className="collapse navbar-collapse d-flex justify-content-center"
             id="navbarNav"
           >
+            
             <Link href={'resumen-parcelas'} passHref>
             <p className="" aria-current="page" href="#"> 
                 Resumen

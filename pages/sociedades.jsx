@@ -23,12 +23,13 @@ export default function Sociedades() {
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
               <Link href={'sociedades'} passHref>
-                <p className='active'>Home</p>
+                <p className='mb-5 active'>Home</p>
               </Link>
+                <p className=""></p>
+                <p className=""></p>
               <Link href={'/profile'} passHref>
-                <p>Mi prefil</p>
+                <p className='mt-5'>Mi perfil</p>
               </Link>
-              
             </div>
           </div>
           {/* sidebar end */}
@@ -36,24 +37,24 @@ export default function Sociedades() {
             <div className="col-8 mb-5">
               <h3 className="my-5">Elige tu sociedad de inversión</h3>
               <div className="row my-3">
-                <Link href={'documents'} passHref>
+                <Link href={'documents-frigo'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 1</h5>
                   </div>
                 </Link>
-                <Link href={'documents'} passHref>
+                <Link href={'documents-parcelas'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 2</h5>
                   </div>
                 </Link>
               </div>
               <div className="row my-3">
-                <Link href={'documents'} passHref>
+                <Link href={'documents-frigo'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 3</h5>
                   </div>
                 </Link>
-                <Link href={'documents'} passHref>
+                <Link href={'documents-parcelas'} passHref>
                   <div className="col-5 mx-auto sociedad">
                     <h5 className="sociedadHeading">sociedad 4</h5>
                   </div>
