@@ -27,14 +27,63 @@ export default function UserInfo() {
   const [publicWorker, setPublicWorker] = useState(false);
   const [isFamily, setIsFamily] = useState(false);
   const [isUsaCitizen, setIsUsaCitizen] = useState(false);
-  const [salary, setSalary] = useState(false);
-  const [investment, setInvestment] = useState(false);
-  const [busniness, setBusniness] = useState(false);
-  const [inheritance, setInheritance] = useState(false);
-  const [other, setOther] = useState(false);
 
+
+  // Declaración fuente de fondos
+  const [toggleSalary, setToggleSalary] = useState("on");
+  const [toggleInvestment, setToggleInvestment] = useState("on");
+  const [toggleBusiness, setToggleBusiness] = useState("on");
+  const [toggleInheritance, setToggleInheritance] = useState("on");
+  const [toggleOthers, setToggleOthers] = useState("on");
+
+  /* Salario checkbox toggle */
+  let checkSalary = (e) => {
+    if(toggleSalary === "off"){
+      setToggleSalary("on")
+    } else if(toggleSalary === "on"){
+      setToggleSalary("off")
+    }
+  }
+
+    /* Investment checkbox toggle */
+    let checkInvestment = (e) => {
+      if(toggleInvestment=== "off"){
+        setToggleInvestment("on")
+      } else if(toggleInvestment === "on"){
+        setToggleInvestment("off")
+      }
+    }
+    
+    /* Business checkbox toggle */
+    let checkBusiness = (e) => {
+      if(toggleBusiness === "off"){
+        setToggleBusiness("on")
+      } else if(toggleBusiness === "on"){
+        setToggleBusiness("off")
+      }
+    }
+    
+    /* Inheritance checkbox toggle */
+    let checkInheritance = (e) => {
+      if(toggleInheritance === "off"){
+        setToggleInheritance("on")
+      } else if(toggleInheritance=== "on"){
+        setToggleInheritance("off")
+      }
+    }
+    
+    /* Others checkbox toggle */
+    let checkOthers = (e) => {
+      if(toggleOthers === "off"){
+        setToggleOthers("on")
+      } else if(toggleOthers === "on"){
+        setToggleOthers("off")
+      }
+    }
   const { state, dispatch } = useContext(Store);
   const { userInfo } = state; // userInfo state
+
+
 
   return (
     <>
@@ -494,16 +543,11 @@ export default function UserInfo() {
                 <div className="form-check">
                   <input
                     className="form-check-input"
-                    type="radio"
+                    type="checkbox"
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
-                    onClick={() => {
-                      setSalary(true);
-                     /*  setInvestment(false);
-                      setBusniness(false);
-                      setInheritance(false);
-                      setOther(false); */
-                    }}
+                    onChange={checkSalary}
+
                   />
 
                   <label
@@ -517,16 +561,10 @@ export default function UserInfo() {
                 <div className="form-check">
                   <input
                     className="form-check-input"
-                    type="radio"
+                    type="checkbox"
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
-                    onClick={() => {
-                      setInvestment(true);
-                      /* setSalary(false);
-                      setBusniness(false);
-                      setInheritance(false);
-                      setOther(false); */
-                    }}
+                    onChange={checkInvestment}
                   />
 
                   <label
@@ -540,16 +578,10 @@ export default function UserInfo() {
                 <div className="form-check">
                   <input
                     className="form-check-input"
-                    type="radio"
+                    type="checkbox"
                     name="flexRadioDefault"
                     id="flexRadioDefault3"
-                    onClick={() => {
-                      setBusniness(true);
-                      /* setSalary(false);
-                      setInvestment(false);
-                      setInheritance(false);
-                      setOther(false); */
-                    }}
+                    onChange={checkBusiness}
                   />
 
                   <label
@@ -563,16 +595,10 @@ export default function UserInfo() {
                 <div className="form-check">
                   <input
                     className="form-check-input"
-                    type="radio"
+                    type="checkbox"
                     name="flexRadioDefault"
                     id="flexRadioDefault4"
-                    onClick={() => {
-                      /* setSalary(false);
-                      setInvestment(false);
-                      setBusniness(false); */
-                      setInheritance(true);
-                      /* setOther(false); */
-                    }}
+                    onChange={checkInheritance}
                   />
 
                   <label
@@ -586,16 +612,10 @@ export default function UserInfo() {
                 <div className="form-check">
                   <input
                     className="form-check-input"
-                    type="radio"
+                    type="checkbox"
                     name="flexRadioDefault"
                     id="flexRadioDefault5"
-                    onClick={() => {
-                      /* setSalary(false);
-                      setInvestment(false);
-                      setBusniness(false);
-                      setInheritance(false); */
-                      setOther(true);
-                    }}
+                    onChange={checkOthers}
                   />
 
                   <label
@@ -607,12 +627,13 @@ export default function UserInfo() {
                 </div>
 
                 {/* Salario Empleo */}
-                {salary && (
+                {toggleSalary !== "on" && (
                   <>
                     <div className="question mt-5">
                       <div className="row mt-3 mb-3">
                         <h5 className="mb-3">Salario / Empleo</h5>
                         <div className="col-6">
+                          
                           <input
                             type="text"
                             className="form-control"
@@ -662,7 +683,7 @@ export default function UserInfo() {
 
                 {/* Inversiones */}
 
-                {investment && (
+                {toggleInvestment !== "on" && (
                   <div className="question mt-5">
                     <h5>Inversiones</h5>
 
@@ -684,7 +705,7 @@ export default function UserInfo() {
 
 
                           {/* Actividades del negocio */}
-                          {busniness && (
+                  {toggleBusiness !== "on" && (
                   <div className="question mt-5">
                     <h5>Actividades del negocio</h5>
 
@@ -759,7 +780,7 @@ export default function UserInfo() {
 
 
 
-                {inheritance && (
+                {toggleInheritance !== "on" && (
                   <div className="question mt-5">
                     <h5>Herencia / Donaciones / Regalos</h5>
 
@@ -843,7 +864,7 @@ export default function UserInfo() {
                   </div>
                 )}
 
-                {other && (
+{toggleOthers !== "on" && (
                   <div className="question mt-5">
                     <h5>Otros</h5>
 
