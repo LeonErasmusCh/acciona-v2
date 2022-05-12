@@ -364,7 +364,7 @@ export default function UserInfo() {
                 {publicWorker && (
                   <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                      Espicificar acrgo, pais y fetchas
+                      Espicificar cargo, pais y fechas
                     </label>
                     <textarea
                       className="form-control"
@@ -420,7 +420,7 @@ export default function UserInfo() {
                 {isFamily && (
                   <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                      Espicificar cargo, pais y fetchas
+                      Espicificar cargo, pais y fechas
                     </label>
                     <textarea
                       className="form-control"
@@ -476,7 +476,7 @@ export default function UserInfo() {
                 {isUsaCitizen && (
                   <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                      Espicificar cargo, pais y fetchas
+                      Espicificar cargo, pais y fechas
                     </label>
                     <textarea
                       className="form-control"
@@ -499,10 +499,10 @@ export default function UserInfo() {
                     id="flexRadioDefault1"
                     onClick={() => {
                       setSalary(true);
-                      setInvestment(false);
+                     /*  setInvestment(false);
                       setBusniness(false);
                       setInheritance(false);
-                      setOther(false);
+                      setOther(false); */
                     }}
                   />
 
@@ -521,11 +521,11 @@ export default function UserInfo() {
                     name="flexRadioDefault"
                     id="flexRadioDefault2"
                     onClick={() => {
-                      setSalary(false);
                       setInvestment(true);
+                      /* setSalary(false);
                       setBusniness(false);
                       setInheritance(false);
-                      setOther(false);
+                      setOther(false); */
                     }}
                   />
 
@@ -544,11 +544,11 @@ export default function UserInfo() {
                     name="flexRadioDefault"
                     id="flexRadioDefault3"
                     onClick={() => {
-                      setSalary(false);
-                      setInvestment(false);
                       setBusniness(true);
+                      /* setSalary(false);
+                      setInvestment(false);
                       setInheritance(false);
-                      setOther(false);
+                      setOther(false); */
                     }}
                   />
 
@@ -567,11 +567,11 @@ export default function UserInfo() {
                     name="flexRadioDefault"
                     id="flexRadioDefault4"
                     onClick={() => {
-                      setSalary(false);
+                      /* setSalary(false);
                       setInvestment(false);
-                      setBusniness(false);
+                      setBusniness(false); */
                       setInheritance(true);
-                      setOther(false);
+                      /* setOther(false); */
                     }}
                   />
 
@@ -590,10 +590,10 @@ export default function UserInfo() {
                     name="flexRadioDefault"
                     id="flexRadioDefault5"
                     onClick={() => {
-                      setSalary(false);
+                      /* setSalary(false);
                       setInvestment(false);
                       setBusniness(false);
-                      setInheritance(false);
+                      setInheritance(false); */
                       setOther(true);
                     }}
                   />
@@ -658,8 +658,33 @@ export default function UserInfo() {
                   </>
                 )}
 
-                {/* Actividades del negocio */}
-                {busniness && (
+      
+
+                {/* Inversiones */}
+
+                {investment && (
+                  <div className="question mt-5">
+                    <h5>Inversiones</h5>
+
+                    <div className="row my-3">
+                      <div className="form-group">
+                        <label htmlFor="exampleFormControlTextarea1">
+                          Venta de propiedad(es) (Dirección, fecha de venta y
+                          valor de propiedad(es) vendida(s))
+                        </label>
+                        <textarea
+                          className="form-control"
+                          id="propertySales"
+                          rows="3"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+
+                          {/* Actividades del negocio */}
+                          {busniness && (
                   <div className="question mt-5">
                     <h5>Actividades del negocio</h5>
 
@@ -731,27 +756,8 @@ export default function UserInfo() {
                   </div>
                 )}
 
-                {/* Inversiones */}
 
-                {investment && (
-                  <div className="question mt-5">
-                    <h5>Inversiones</h5>
 
-                    <div className="row my-3">
-                      <div className="form-group">
-                        <label htmlFor="exampleFormControlTextarea1">
-                          Venta de propiedad(es) (Dirección, fetcha de venta y
-                          valor de propiedad(es) vendida(s))
-                        </label>
-                        <textarea
-                          className="form-control"
-                          id="propertySales"
-                          rows="3"
-                        ></textarea>
-                      </div>
-                    </div>
-                  </div>
-                )}
 
                 {inheritance && (
                   <div className="question mt-5">
