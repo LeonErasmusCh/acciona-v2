@@ -1,33 +1,32 @@
-import React, { useContext, useState } from 'react';
-import Link from 'next/link';
-import { Store } from '../utils/Store'; //store
-import Modal from '../components/modal';
+import React, { useContext, useState } from "react";
+import Link from "next/link";
+import { Store } from "../utils/store"; //store
+import Modal from "../components/modal";
 
 export default function UserInfo() {
   //Datos personales
-  const [firstName, setFirstName] = useState('');
-  const [lastNameFather, setLastNameFather] = useState('');
-  const [lastNameMother, setLastNameMother] = useState('');
-  const [rut, setRut] = useState('');
-  const [nationality, setNationality] = useState('');
-  const [country, setCountry] = useState('');
-  const [city, setCity] = useState('');
-  const [address, setAddress] = useState('');
-  const [telephone, setTelephone] = useState('');
-  const [celular, setCelular] = useState('');
-  const [profession, setProfession] = useState('');
-  const [jobTitle, setJobTitle] = useState('');
-  const [employerName, setEmployerName] = useState('');
-  const [bank, setBank] = useState('');
-  const [accountType, setAccountType] = useState('');
-  const [accountNumber, setAccountNumber] = useState('');
-  const [spousName, setSpouseName] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastNameFather, setLastNameFather] = useState("");
+  const [lastNameMother, setLastNameMother] = useState("");
+  const [rut, setRut] = useState("");
+  const [nationality, setNationality] = useState("");
+  const [country, setCountry] = useState("");
+  const [city, setCity] = useState("");
+  const [address, setAddress] = useState("");
+  const [telephone, setTelephone] = useState("");
+  const [celular, setCelular] = useState("");
+  const [profession, setProfession] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
+  const [employerName, setEmployerName] = useState("");
+  const [bank, setBank] = useState("");
+  const [accountType, setAccountType] = useState("");
+  const [accountNumber, setAccountNumber] = useState("");
+  const [spousName, setSpouseName] = useState("");
 
   //Bottom half
   const [publicWorker, setPublicWorker] = useState(false);
   const [isFamily, setIsFamily] = useState(false);
   const [isUsaCitizen, setIsUsaCitizen] = useState(false);
-
 
   // Declaración fuente de fondos
   const [toggleSalary, setToggleSalary] = useState("on");
@@ -38,52 +37,50 @@ export default function UserInfo() {
 
   /* Salario checkbox toggle */
   let checkSalary = (e) => {
-    if(toggleSalary === "off"){
-      setToggleSalary("on")
-    } else if(toggleSalary === "on"){
-      setToggleSalary("off")
+    if (toggleSalary === "off") {
+      setToggleSalary("on");
+    } else if (toggleSalary === "on") {
+      setToggleSalary("off");
     }
-  }
+  };
 
-    /* Investment checkbox toggle */
-    let checkInvestment = (e) => {
-      if(toggleInvestment=== "off"){
-        setToggleInvestment("on")
-      } else if(toggleInvestment === "on"){
-        setToggleInvestment("off")
-      }
+  /* Investment checkbox toggle */
+  let checkInvestment = (e) => {
+    if (toggleInvestment === "off") {
+      setToggleInvestment("on");
+    } else if (toggleInvestment === "on") {
+      setToggleInvestment("off");
     }
-    
-    /* Business checkbox toggle */
-    let checkBusiness = (e) => {
-      if(toggleBusiness === "off"){
-        setToggleBusiness("on")
-      } else if(toggleBusiness === "on"){
-        setToggleBusiness("off")
-      }
+  };
+
+  /* Business checkbox toggle */
+  let checkBusiness = (e) => {
+    if (toggleBusiness === "off") {
+      setToggleBusiness("on");
+    } else if (toggleBusiness === "on") {
+      setToggleBusiness("off");
     }
-    
-    /* Inheritance checkbox toggle */
-    let checkInheritance = (e) => {
-      if(toggleInheritance === "off"){
-        setToggleInheritance("on")
-      } else if(toggleInheritance=== "on"){
-        setToggleInheritance("off")
-      }
+  };
+
+  /* Inheritance checkbox toggle */
+  let checkInheritance = (e) => {
+    if (toggleInheritance === "off") {
+      setToggleInheritance("on");
+    } else if (toggleInheritance === "on") {
+      setToggleInheritance("off");
     }
-    
-    /* Others checkbox toggle */
-    let checkOthers = (e) => {
-      if(toggleOthers === "off"){
-        setToggleOthers("on")
-      } else if(toggleOthers === "on"){
-        setToggleOthers("off")
-      }
+  };
+
+  /* Others checkbox toggle */
+  let checkOthers = (e) => {
+    if (toggleOthers === "off") {
+      setToggleOthers("on");
+    } else if (toggleOthers === "on") {
+      setToggleOthers("off");
     }
+  };
   const { state, dispatch } = useContext(Store);
   const { userInfo } = state; // userInfo state
-
-
 
   return (
     <>
@@ -92,13 +89,13 @@ export default function UserInfo() {
           {/* sidebar */}
           <div className="col-2 sidebar text-center">
             <div className="row text-center menu">
-              <Link href={'sociedades'} passHref>
-                <p className='mb-5'>Home</p>
+              <Link href={"sociedades"} passHref>
+                <p className="mb-5">Home</p>
               </Link>
-                <p className=""></p>
-                <p className=""></p>
-              <Link href={'/profile'} passHref>
-                <p className='mt-5 active'>Mi perfil</p>
+              <p className=""></p>
+              <p className=""></p>
+              <Link href={"/profile"} passHref>
+                <p className="mt-5 active">Mi perfil</p>
               </Link>
             </div>
           </div>
@@ -412,7 +409,7 @@ export default function UserInfo() {
                 {publicWorker && (
                   <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                      Espicificar cargo, pais y fechas
+                      Especificar cargo, pais y fechas
                     </label>
                     <textarea
                       className="form-control"
@@ -427,8 +424,8 @@ export default function UserInfo() {
               {/* checkbox questions - 2 */}
               <div className="question mt-5">
                 <p>
-                  ¿Es cónyuge o pariente hasta el segundo grado de consanguidad
-                  de alguna de etas persona? (hermanos, abuelos y nietos)?
+                  ¿Es cónyuge o pariente hasta el segundo grado de consanguinidad
+                  de alguna de estas personas? (hermanos, abuelos y nietos)?
                 </p>
                 <div className="form-check">
                   <input
@@ -469,7 +466,7 @@ export default function UserInfo() {
                 {isFamily && (
                   <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                      Espicificar cargo, pais y fechas
+                    Especificar cargo, pais y fechas
                     </label>
                     <textarea
                       className="form-control"
@@ -526,7 +523,7 @@ export default function UserInfo() {
                 {isUsaCitizen && (
                   <div className="form-group">
                     <label htmlFor="exampleFormControlTextarea1">
-                      Espicificar cargo, pais y fechas
+                    Especificar cargo, pais y fechas
                     </label>
                     <textarea
                       className="form-control"
@@ -541,7 +538,7 @@ export default function UserInfo() {
               {/* Declaración fuente de fondos */}
               <div className="question mt-5">
                 <h5>Declaración fuente de fondos</h5>
-                <p>Origen del dinero de la suscipción</p>
+                <p>Origen del dinero de la suscripción</p>
                 <div className="form-check">
                   <input
                     className="form-check-input"
@@ -549,7 +546,6 @@ export default function UserInfo() {
                     name="flexRadioDefault"
                     id="flexRadioDefault1"
                     onChange={checkSalary}
-
                   />
 
                   <label
@@ -635,7 +631,6 @@ export default function UserInfo() {
                       <div className="row mt-3 mb-3">
                         <h5 className="mb-3">Salario / Empleo</h5>
                         <div className="col-6">
-                          
                           <input
                             type="text"
                             className="form-control"
@@ -682,8 +677,6 @@ export default function UserInfo() {
                   </>
                 )}
 
-      
-
                 {/* Inversiones */}
 
                 {toggleInvestment !== "on" && (
@@ -707,9 +700,8 @@ export default function UserInfo() {
                   </div>
                 )}
 
-
-                          {/* Actividades del negocio */}
-                  {toggleBusiness !== "on" && (
+                {/* Actividades del negocio */}
+                {toggleBusiness !== "on" && (
                   <div className="question mt-5">
                     <h5>Actividades del negocio</h5>
 
@@ -765,7 +757,7 @@ export default function UserInfo() {
                           className="form-control"
                           id="anualInvoice"
                           aria-describedby="anualInvoice"
-                          placeholder="Facturacion anual"
+                          placeholder="Facturación anual"
                         />
                       </div>
 
@@ -781,9 +773,6 @@ export default function UserInfo() {
                     </div>
                   </div>
                 )}
-
-
-
 
                 {toggleInheritance !== "on" && (
                   <div className="question mt-5">
@@ -832,7 +821,7 @@ export default function UserInfo() {
                     <div className="row my-3">
                       <div className="form-group">
                         <label htmlFor="exampleFormControlTextarea1">
-                          Activos recibido
+                          Activos recibidos
                         </label>
                         <textarea
                           className="form-control"
@@ -870,14 +859,14 @@ export default function UserInfo() {
                   </div>
                 )}
 
-{toggleOthers !== "on" && (
+                {toggleOthers !== "on" && (
                   <div className="question mt-5">
                     <h5>Otros</h5>
 
                     <div className="row my-3">
                       <div className="form-group">
                         <label htmlFor="exampleFormControlTextarea1">
-                          ¿De donde proviene los fondos invertidos?
+                          ¿De donde provienen los fondos invertidos?
                         </label>
                         <textarea
                           className="form-control"
@@ -905,5 +894,5 @@ export default function UserInfo() {
         </div>
       </div>
     </>
-  )
+  );
 }
