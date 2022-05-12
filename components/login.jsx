@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'; //Next
 import { useForm } from 'react-hook-form'; //validation
 import { signInWithEmailAndPassword } from 'firebase/auth'; //Firebase
 import { auth } from '../utils/firebase-config'; //Firebase
-import { Store } from '../utils/Store'; //store
+import { Store } from '../utils/store'; //store
 
 export default function Login() {
   const { state, dispatch } = useContext(Store);
