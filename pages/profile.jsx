@@ -1,9 +1,22 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import Link from "next/link";
 import { Store } from "../utils/store"; //store
 import Modal from "../components/modal";
+import { useRouter } from 'next/router';
+
 
 export default function UserInfo() {
+  const { state, dispatch } = useContext(Store);
+  const { userInfo } = state; // userInfo state
+  const router = useRouter();
+
+
+  useEffect(() => {
+    if (!userInfo) {
+       router.push('/'); 
+    }
+  }, [userInfo]);
+
   //Datos personales
   const [firstName, setFirstName] = useState("");
   const [lastNameFather, setLastNameFather] = useState("");
@@ -79,8 +92,7 @@ export default function UserInfo() {
       setToggleOthers("off");
     }
   };
-  const { state, dispatch } = useContext(Store);
-  const { userInfo } = state; // userInfo state
+
 
   return (
     <>

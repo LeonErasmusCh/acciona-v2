@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'; // Cookies
 import Link from 'next/link'; //Next
 import { useRouter } from 'next/router'; //Next
 import { useForm } from 'react-hook-form'; //validation
-import { signInWithEmailAndPassword } from 'firebase/auth'; //Firebase
+import { signInWithEmailAndPassword, getAuth } from 'firebase/auth'; //Firebase
 import { auth } from '../utils/firebase-config'; //Firebase
 import { Store } from '../utils/store'; //store
 
@@ -22,38 +22,35 @@ export default function Login() {
     formState: { errors },
   } = useForm();
 
-  // console.log(watch('email'));
-  // console.log(watch('password'));
   /* login */
 
   const onSubmit = (data) => {
-    //console.log(data);
+    console.log(data);
     handleLogin();
   };
 
-  const handleLogin = async () => {
-    try {
-      const user = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      );
+const auth = getAuth();
+  const handleLogin = () => {
+    signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log(user.providerData[0].uid)
       dispatch({ type: 'USER_LOGIN', payload: user });
       Cookies.set('userInfo', JSON.stringify(user));
       //if firebase user exists - redict to /info-user
       if (user) {
         router.push('/profile');
       }
-      //console.log('userInfo in state', userInfo.user);
-    } catch (error) {
-      console.log(error.message);
-    }
+      // ...
+      
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage)
+    });
   };
-
-/*   useEffect(() => {
-    console.log(process.env.NEXT_PUBLIC_API_KEY);
-    console.log('.env test', process.env.NEXT_PUBLIC_BASE_URL);
-  }, []); */
 
   return (
     <>
