@@ -1,9 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react'; //React
+import React, { useState, useContext } from 'react'; //React
 import Cookies from 'js-cookie'; // Cookies
 import Link from 'next/link'; //Next
 import { useRouter } from 'next/router'; //Next
 import { useForm } from 'react-hook-form'; //validation
-import { signInWithEmailAndPassword, getAuth } from 'firebase/auth'; //Firebase
+import { signInWithEmailAndPassword, getAuth , sendPasswordResetEmail} from 'firebase/auth'; //Firebase
 import { auth } from '../utils/firebase-config'; //Firebase
 import { Store } from '../utils/store'; //store
 
@@ -30,6 +30,7 @@ export default function Login() {
   };
 
 const auth = getAuth();
+
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, loginEmail, loginPassword)
     .then((userCredential) => {
@@ -51,6 +52,21 @@ const auth = getAuth();
       console.log(errorCode, errorMessage)
     });
   };
+
+  //Send password reset email
+ const handlePassowordReset = () =>{
+  sendPasswordResetEmail(auth, loginEmail)
+  .then(() => {
+    // Password reset email sent!
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+ }
+
 
   return (
     <>
@@ -109,13 +125,8 @@ const auth = getAuth();
           <button className="btn loginBtn" type="submit" onClick={handleLogin}>
             Ingresar
           </button>
-          {/*    <Link href="/user-info" passHref>
-            <button className="btn loginBtn" type="submit">
-              Ingresar
-            </button>
-          </Link> */}
         </div>
-        <p className="my-4 text-center">Olvidé mi contraseña</p>
+        <button className="btn loginBtn my-4 w-100" onClick={handlePassowordReset}>Olvidé mi contraseña</button>
       </form>
     </>
   )
