@@ -1,11 +1,12 @@
 import React, { useContext, useState, useEffect } from "react";
 import Link from "next/link";
-import { Store } from "../utils/store"; //store
 import Modal from "../components/modal";
+import { Store } from "../utils/store"; //store
 import { useRouter } from 'next/router';
 
 
 export default function UserInfo() {
+  
   const { state, dispatch } = useContext(Store);
   const { userInfo } = state; // userInfo state
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function UserInfo() {
        router.push('/'); 
     }
   }, [userInfo]);
+
 
   //Datos personales
   const [firstName, setFirstName] = useState("");

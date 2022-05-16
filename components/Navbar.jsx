@@ -44,7 +44,7 @@ export default function Navbar() {
             <p>
               <span className="mx-3">{userInfo.providerData[0].uid}</span> 
               <span>|</span>
-              <button className=" btn mx-3" onClick={handleLogout}>cerrar sesión</button>
+              <button className=" btn mx-3 text-white" onClick={handleLogout}>cerrar sesión</button>
             </p>
           ) : ""}
         </div>
