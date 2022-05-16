@@ -13,6 +13,7 @@ export default function Cartola() {
        router.push('/'); 
     }
   }, [userInfo]);
+  
 
   const [date, setDate] = useState("");
 
