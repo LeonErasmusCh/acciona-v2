@@ -51,7 +51,7 @@ useEffect(() => {
                 <p className="active">Fondo Parcelas de TaguaTagua</p>
               </Link>
               <Link href={'/profile'} passHref>
-                <p className='mt-5'>Mi prefil</p>
+                <p className='mt-5'>Mi perfil</p>
               </Link>
             </div>
           </div>
