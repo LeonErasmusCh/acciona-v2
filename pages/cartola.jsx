@@ -1,9 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
+import { Store } from "../utils/store"; //store
+import { useRouter } from 'next/router';
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function Cartola() {
+  const { state, dispatch } = useContext(Store);
+  const { userInfo } = state; // userInfo state
   const router = useRouter();
+
+  useEffect(() => {
+    if (!userInfo) {
+       router.push('/'); 
+    }
+  }, [userInfo]);
 
   const [date, setDate] = useState("");
 

@@ -1,7 +1,21 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Link from 'next/link';
+import { Store } from "../utils/store"; //store
+import { useRouter } from 'next/router';
 
 export default function Sociedades() {
+
+  const { state, dispatch } = useContext(Store);
+  const { userInfo } = state; // userInfo state
+  const router = useRouter();
+
+
+  useEffect(() => {
+    if (!userInfo) {
+       router.push('/'); 
+    }
+  }, [userInfo]);
+
   return (
     <>
       {/* Navbar2  */}

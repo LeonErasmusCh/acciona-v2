@@ -1,14 +1,20 @@
-import React , { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from "react";
+import { Store } from "../utils/store"; //store
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 export default function ResumenFrigo() {
 
+  const { state, dispatch } = useContext(Store);
+  const { userInfo } = state; // userInfo state
+  const router = useRouter();
 
-useEffect(() => {
-}, [])
 
-
-
+  useEffect(() => {
+    if (!userInfo) {
+       router.push('/'); 
+    }
+  }, [userInfo]);
 
   return (
     <>
